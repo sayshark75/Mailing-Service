@@ -2,11 +2,12 @@
   "name": "MailerService",
   "version": "1.0.0",
   "description": "A Simple Service to Send Mails from Your Email to others using NodeMailer",
-  "main": "src/app.ts",
+  "main": "dist/app.js",
   "author": "Sayyed Sharuk",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/app.js",
     "dev": "nodemon src/app.ts"
   },
   "dependencies": {
