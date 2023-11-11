@@ -13,6 +13,8 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use("/mail", mailRouter);
 
+// No default get request, because we serving a static page from directory "/public"
+
 app.listen(process.env.PORT, () => {
   console.log(`Server Running on port ${process.env.PORT}`);
 });

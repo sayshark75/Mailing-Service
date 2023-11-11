@@ -1,9 +1,7 @@
 import express from "express";
-import dotenv from "dotenv";
 import { sendingservice } from "../controllers/service.controller";
 
-dotenv.config();
-
+// Simple Routing
 const router = express.Router();
 
 router.post("/", sendingservice);
