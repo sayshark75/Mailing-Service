@@ -1,9 +1,9 @@
 import express from "express";
-import { sendingservice } from "../controllers/service.controller";
+import MailController from "../controllers/mail.controller";
 
 // Simple Routing
 const router = express.Router();
 
-router.post("/", sendingservice);
+router.post("/", MailController.sendMail);
 
 export default router;
