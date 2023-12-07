@@ -23,7 +23,7 @@ const mailerService = {
       // subject line
       subject: `Message From: ${name}`,
       // Whatever text you want to send,
-      text: `User ${name}, having email as ${email},\n Says: ${message} :\n Date:${getCurrentDateInTimeZone("GMT+5:30")}`,
+      text: `User ${name}, having email as ${email},\n Says: ${message} :\n Date:${getCurrentDateInTimeZone("Asia/Kolkata")}`,
       // Whatever HTML you want to send
       html: "",
     });
