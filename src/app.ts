@@ -6,8 +6,19 @@ import cors from "cors";
 const app = express();
 
 dotenv.config();
+const allowedOrigins = [process.env.ORIGIN_GLOBAL, process.env.ORIGIN_LOCAL];
 
-app.use(cors());
+const corsOptions: cors.CorsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
